@@ -1,4 +1,43 @@
 ---
 label: Project
-hide_body: true
-fields: []
+hide_body: false
+fields:
+- name: title
+  type: text
+  config:
+    required: false
+  label: Title
+- name: director
+  type: text
+  config:
+    required: false
+  label: Director
+- name: writer
+  type: text
+  config:
+    required: false
+  label: Writer
+- name: cast
+  type: text
+  config:
+    required: false
+  label: Cast
+- name: synopsis
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: true
+    schema:
+      format: markdown
+  label: Synopsis
+- name: watch
+  type: text
+  config:
+    required: false
+  label: Watch
+  description: 'Info about viewing platforms '
+- name: stills
+  type: image_gallery
+  config: {}
+  label: Stills
