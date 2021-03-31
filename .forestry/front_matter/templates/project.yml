@@ -47,5 +47,6 @@ fields:
     maxSize: 64
   label: Main Still
 pages:
+- _projects/harriet.html
 - _projects/honey-boy.md
 - _projects/together-together.html
