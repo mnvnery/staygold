@@ -47,6 +47,7 @@ fields:
     maxSize: 64
   label: Main Still
 pages:
+- _projects/a-ciambra.html
 - _projects/harriet.html
 - _projects/honey-boy.md
 - _projects/patti-cake.html
