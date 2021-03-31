@@ -1,6 +1,7 @@
 ---
 layout: default
 ---
+
 <div class="main-grid">
     <div class="logo-section"><img src="{{ site.baseurl }}/assets/img/logo.svg" class="logo" alt="logo"></div>
     <div class="menu">
@@ -10,30 +11,12 @@ layout: default
             <li><a href="{{ site.baseurl }}/pledge">Our Pledge</a></li>
             <li class="projects-drop">Projects</li>
             {% for project in site.projects %} 
-            <li class="projects" data-hover="{{ site.baseurl }}/{{ project.main_still }}"><a href="{{ site.baseurl }}{{ project.url }}">{{ project.title }}</a></li>
+            <li class="projects projects-open"><a href="{{ site.baseurl }}{{ project.url }}">{{ project.title }}</a></li>
             {% endfor %} 
             <li><a href="{{ site.baseurl }}/news">News</a></li>
             <li><a href="{{ site.baseurl }}/contact">Contact</a></li>
         </ul>
     </div>
     <div class="content-area">
-        <img src="{{ site.baseurl }}/assets/img/patticakes.webp" class="intro-img" alt="">
     </div>
 </div>
-<div class="info-grid">
-    <ul class="feature-text">
-        <li class="feature-title"><u>Patti Cake$</u></li>
-        <li class="feature-info">Directed by Geremy Jasper</li>
-        <li class="feature-info">Written by Geremy Jasper</li>
-    </ul>
-    <div></div>
-</div>
-
-<script>
-$(document).ready(function () {
-    $('.projects').hover(function (e) {
-        imageData = e.target.getAttribute('data-hover')
-        $('.intro-img').attr('src' , imageData)
-    });
-});
-</script>
