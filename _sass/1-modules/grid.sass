@@ -1,36 +1,58 @@
-.main-grid 
-    display: grid
-    grid-template-columns: 9% 17% 74%
+.mobile-grid
+    z-index: 3
     width: 100vw
-    overflow: hidden
+    border-bottom: 1px solid black
+    background-color: $background
+    padding: 5vw 0 0 5vw
 
-.content-area
-    border-left: 1px solid black
-    height: 100vh
-    margin-right: 1.5vh
 
-.logo
-    width: 5vw
+.mobile-sidebar
+    padding: 7vw 0 0 10vw
 
-.logo-section
-    justify-self: center
-    margin-top: 4vh
 
 .menu ul
-    margin-top: 0 
-    list-style-type: none 
-    padding-left: 0
-    font-size: 1.4vw
-    line-height: 2vw
+    width: 100vw
+    font-size: 6vw
+    line-height: 11vw
+    list-style-type: none
+    padding: 0
+    margin: 0
 
 .menu
-    margin-top: 4vh
-    margin-left: 1vw
+    display: none
+    width: 100vw
+    height: 100vh
 
 .projects 
-    margin-left: 1.5vw
-    max-width: 10vw
+    margin-left: 5vw
     display: none
 
 .projects-open
-    display: block !important
+    display: block
+
+.logo-section
+    width: 100vw
+
+.logo
+    width: 12vw
+    margin-bottom: 4vw
+
+.logo-open
+    width: 20vw !important
+    margin-bottom: 7vw
+
+.intro-img 
+    max-width: 94vw
+    height: 70vh
+    object-fit: cover
+    object-position: left
+    margin: 3vw
+
+.content-area
+    height: 73vh
+
+.hamburger
+    position: fixed
+    right: 5vw
+    margin-top: 3.5vw !important
+
