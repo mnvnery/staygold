@@ -20,12 +20,5 @@ fields:
     schema:
       format: html-blocks
   label: Who We Are
-- name: who_we_are
-  type: list
-  config:
-    use_select: false
-    min: 
-    max: 
-  label: Who We Are
 pages:
 - about.html
