@@ -27,3 +27,5 @@ fields:
     min: 
     max: 
   label: Who We Are
+pages:
+- about.html
