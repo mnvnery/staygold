@@ -11,7 +11,7 @@ fields:
     schema:
       format: html-blocks
   label: What We Do
-- name: who_we_are
+- name: who
   type: blocks
   label: Who We Are
   template_types:
@@ -19,5 +19,23 @@ fields:
   config:
     min: 
     max: 
+- name: who-we-are
+  type: field_group_list
+  fields:
+  - name: name
+    type: text
+    config:
+      required: false
+    label: Name
+  - name: position
+    type: text
+    config:
+      required: false
+    label: Position
+  config:
+    min: 
+    max: 
+    labelField: 
+  label: who-we-are
 pages:
 - about.html
