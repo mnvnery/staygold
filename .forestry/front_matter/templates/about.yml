@@ -20,5 +20,13 @@ fields:
     schema:
       format: html-blocks
   label: Who We Are
+- name: who_we_are
+  type: blocks
+  label: Who We Are
+  template_types:
+  - team-member
+  config:
+    min: 
+    max: 
 pages:
 - about.html
