@@ -12,14 +12,6 @@ fields:
       format: html-blocks
   label: What We Do
 - name: who
-  type: blocks
-  label: Who We Are
-  template_types:
-  - team-member
-  config:
-    min: 
-    max: 
-- name: who-we-are
   type: field_group_list
   fields:
   - name: name
@@ -35,7 +27,7 @@ fields:
   config:
     min: 
     max: 
-    labelField: 
-  label: who-we-are
+    labelField: name
+  label: Who We Are
 pages:
 - about.html
