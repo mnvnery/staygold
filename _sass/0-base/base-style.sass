@@ -8,6 +8,9 @@ $background : #F2F3EB
 html, body
     overflow: hidden
 
+html
+    height: -webkit-fill-available
+
 body
     font-family: "HKGrotesk", sans-serif
     background-color: $background
@@ -15,6 +18,10 @@ body
     margin: 0
     -moz-osx-font-smoothing: grayscale
     -webkit-font-smoothing: antialiased
+    min-height: 100vh
+    /* mobile viewport bug fix */
+    min-height: -webkit-fill-available
+
 a 
     text-decoration: none
     color: black

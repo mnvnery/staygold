@@ -86,7 +86,13 @@ who:
         <h1> <u>About</u></h1>
         <h4><u>WHAT WE DO?</u></h4>
         {{ page.what }}
+        <br>
         <h4><u>WHO WE ARE?</u></h4>
-        {{ page.who }}
+        {% for item in page.who %}
+        <p style="margin-bottom: 0;"><u>{{ item.name }}</u></p>
+        <p style="margin-top: 0.3vh;">{{ item.position }}</p>
+        {{ item.description }}
+        <br>
+        {% endfor %}
     </div>
 </div>
