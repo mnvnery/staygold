@@ -28,6 +28,6 @@ fields:
     min: 
     max: 
     labelField: name
-  label: Who We Are
+  label: Team Members
 pages:
 - about.html
