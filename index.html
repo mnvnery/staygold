@@ -26,7 +26,7 @@ layout: default
     <div></div>
 </div>    
     <div class="content-area">
-        <img src="{{ site.baseurl }}/assets/img/patticakes.webp" class="intro-img" alt="">
+        <img src="{{ site.baseurl }}{{ project.main_still }}" class="intro-img" alt="">
     </div>
 
 
@@ -40,8 +40,33 @@ layout: default
 
 
 <script>
+
+const highlightimg = new Array();
+{% for project in site.projects %}
+    {% if project.highlight == true %}
+        highlightimg.push("{{ site.baseurl }}{{ project.main_still }}");
+    {% endif %}
+{% endfor %}
+
+$(function () {
+var i = 0;
+$(".intro-img").attr('src', highlightimg[i]);
+    setInterval(function () {
+        i++;
+        if (i == highlightimg.length) {
+            i = 0;
+        }
+        $(".intro-img").fadeOut("slow", function () {
+            $(this).attr('src', highlightimg[i]);
+            $(this).fadeIn("slow");
+        });
+    }, 5000);
+});
+
+
 $(document).ready(function () {
     $('.projects').hover(function (e) {
+        clearInterval;
         imageData = e.target.getAttribute('data-hover')
         $('.intro-img').attr('src' , imageData)
         $('.info-grid').hide()
