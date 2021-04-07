@@ -46,6 +46,10 @@ fields:
   config:
     maxSize: 64
   label: Main Still
+- name: highlight
+  type: boolean
+  label: Highlight
+  description: Should this project be highlighted on the home page?
 pages:
 - _projects/a-ciambra.html
 - _projects/harriet.html
