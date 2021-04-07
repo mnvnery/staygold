@@ -50,6 +50,7 @@ fields:
   type: boolean
   label: Highlight
   description: Should this project be highlighted on the home page?
+  default: false
 pages:
 - _projects/a-ciambra.html
 - _projects/harriet.html
