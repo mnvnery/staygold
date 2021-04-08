@@ -7,11 +7,13 @@ fields:
   label: layout
   hidden: true
 - name: news
-  type: list
+  type: blocks
+  label: News
+  template_types:
+  - news-date
+  - news-article
   config:
-    use_select: false
     min: 
     max: 
-  label: News
 pages:
 - news.html
