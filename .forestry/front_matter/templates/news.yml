@@ -7,13 +7,35 @@ fields:
   label: layout
   hidden: true
 - name: news
-  type: blocks
-  label: News
-  template_types:
-  - news-date
-  - news-article
+  type: field_group_list
+  fields:
+  - name: date
+    type: text
+    config:
+      required: false
+    label: Date
+  - name: article
+    type: field_group_list
+    fields:
+    - name: title
+      type: text
+      config:
+        required: false
+      label: Title
+    - name: link
+      type: text
+      config:
+        required: false
+      label: Link
+    config:
+      min: 
+      max: 
+      labelField: 
+    label: Article
   config:
     min: 
     max: 
+    labelField: 
+  label: News
 pages:
 - news.html
