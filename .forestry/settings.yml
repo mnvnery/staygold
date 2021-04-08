@@ -5,6 +5,18 @@ admin_path: ''
 webhook_url: 
 sections:
 - type: document
+  path: pledge.html
+  label: Pledge
+  match: "**/*"
+- type: document
+  path: news.html
+  label: News
+  match: "**/*"
+- type: document
+  path: contact.html
+  label: Contacts
+  match: "**/*"
+- type: document
   path: about.html
   label: About
 - type: directory
