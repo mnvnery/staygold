@@ -38,3 +38,5 @@ fields:
     max: 
     labelField: 
   label: Signatures
+pages:
+- pledge.html
