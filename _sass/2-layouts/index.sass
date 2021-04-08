@@ -7,13 +7,34 @@
     justify-content: space-between
     padding: 5vw 5vw
     border-top: 1px solid black
+    min-height: 10vh
 
 
 .feature-title
     font-size: 5.5vw
     max-width: 35vw
 
+.feature-info
+    margin-left: 8vw
 
+.intro-img 
+    max-width: 94vw
+    height: 60vh
+    object-fit: cover
+    object-position: center
+    z-index: 1
+    position: absolute
+
+.intro-img.active
+    z-index: 3
+
+.info-grid
+    z-index: 1
+    position: absolute
+    background-color: $background
+
+.info-grid.active
+    z-index: 3
 
 
 @media screen and(min-width: 835px)
@@ -35,11 +56,14 @@
     .info-grid
         position: absolute
         bottom: 0
-        display: block
+        display: flex
+        flex-direction: column
+        justify-content: flex-end
         border: none
         text-align: right
         margin-right: 3.5vw
         width: 23%
         margin-bottom: 1.5vh
-        padding: 0 
+        padding: 0
+        height: 15vh 
 

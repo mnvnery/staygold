@@ -16,9 +16,9 @@ address: "<p>630 5th Ave</p><p>Suite 2505</p><p>New York, NY 10111</p>"
             <li><a href="{{ site.baseurl }}/index">Stay Gold Features</a></li>
             <li><a href="{{ site.baseurl }}/about">About</a> </li>
             <li><a href="{{ site.baseurl }}/pledge">Our Pledge</a></li>
-            <li class="projects-drop">Projects</li>
+            <li class="projects-drop"><a href="#">Projects</a></li>
             {% for project in site.projects %} 
-            <li class="projects" data-hover="{{ site.baseurl }}{{ project.main_still }}"><a href="{{ site.baseurl }}{{ project.url }}">{{ project.title }}</a></li>
+            <li class="projects"><a href="{{ site.baseurl }}{{ project.url }}">{{ project.title }}</a></li>
             {% endfor %} 
             <li><a href="{{ site.baseurl }}/news">News</a></li>
             <li><a href="{{ site.baseurl }}/contact"><u>Contact</u></a></li>
@@ -26,4 +26,8 @@ address: "<p>630 5th Ave</p><p>Suite 2505</p><p>New York, NY 10111</p>"
     </div>
 <div></div>
 </div>   
-<div class="content-area"></div>
+<div class="content-area">
+    <div class="content-about">
+        <h1><u>Contact</u></h1>
+    </div>
+</div>
