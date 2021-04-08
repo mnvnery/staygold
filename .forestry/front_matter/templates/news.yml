@@ -13,3 +13,5 @@ fields:
   config:
     min: 
     max: 
+pages:
+- news.html
