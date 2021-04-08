@@ -20,3 +20,5 @@ fields:
     schema:
       format: html-blocks
   label: Address
+pages:
+- contact.html
