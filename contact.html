@@ -28,6 +28,25 @@ address: "<p>630 5th Ave</p><p>Suite 2505</p><p>New York, NY 10111</p>"
 </div>   
 <div class="content-area">
     <div class="content-about">
-        <h1><u>Contact</u></h1>
+            <h1 class="contact-title"><u>Contact</u></h1>
+        <div class="content-forward">
+            <p class="phone">{{ page.phone_number }}</p>
+            <div class="address">{{ page.address }}</div>
+            <div id='map'></div>
+        </div>
     </div>
 </div>
+
+
+<script>
+    mapboxgl.accessToken = 'pk.eyJ1IjoibW5lcnkiLCJhIjoiY2tkazZ3MWJnMGx4MTJ0bnRlNGkzOWtyaCJ9.Fc886hpcM7gZQa8_8Q9wXw';
+    var map = new mapboxgl.Map({
+    container: 'map', // container ID
+    style: 'mapbox://styles/mapbox/dark-v10', // style URL
+    center: [-73.978340, 40.759201], // starting position [lng, lat]
+    zoom: 13 // starting zoom
+    });
+    var marker2 = new mapboxgl.Marker({ color: '#F2F3EB' })
+        .setLngLat([-73.978340, 40.759201])
+        .addTo(map);
+</script>

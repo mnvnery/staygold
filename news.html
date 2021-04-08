@@ -89,9 +89,14 @@ news:
     </div>
 <div></div>
 </div>   
-<div class="content-area">
-    <div class="content-about">
+<div class="content-area content-scroll">
+    <div class="content-news">
         <h1><u>News</u></h1>
-        
+        {% for item in page.news %}
+        <h4 class="article-date"><u>{{ item.date }}</u></h4>
+            {% for article in item.article %}
+                <a href="{{ article.link }}" target="_blank"><p class="article-title">{{ article.title }}</p></a>
+            {% endfor %}
+        {% endfor %}
     </div>
 </div>
