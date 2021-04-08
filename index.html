@@ -17,61 +17,91 @@ layout: default
                 <li><a href="{{ site.baseurl }}/pledge">Our Pledge</a></li>
                 <li class="projects-drop"><a href="#">Projects</a></li>
                 {% for project in site.projects %} 
-                <li class="projects" data-hover="{{ site.baseurl }}{{ project.main_still }}"><a href="{{ site.baseurl }}{{ project.url }}">{{ project.title }}</a></li>
+                <li class="projects"><a href="{{ site.baseurl }}{{ project.url }}" data-hover="{{ site.baseurl }}{{ project.main_still }}">{{ project.title }}</a></li>
                 {% endfor %} 
                 <li><a href="{{ site.baseurl }}/news">News</a></li>
                 <li><a href="{{ site.baseurl }}/contact">Contact</a></li>
             </ul>
         </div>
     <div></div>
-</div>    
-    <div class="content-area">
-        <img src="" class="intro-img" alt="">
-    </div>
+</div>  
 
-
-<div class="info-grid">
-        <div class="feature-title"><u>Patti Cake$</u></div>
-        <div class="feature-info">
-        <span>Directed by Geremy Jasper</span><br> 
-        <span>Written by Geremy Jasper</span>
-        </div>
+<div class="content-area slideshow-content">
+    {% assign projects = site.projects | where_exp: "page", "page.highlight == true" %}
+    {% for project in projects limit:1 %}
+        <img src="{{ site.baseurl }}{{ project.main_still }}" class="intro-img active" alt="">
+    {% endfor %}
+    {% for project in projects offset:1 %}
+        <img src="{{ site.baseurl }}{{ project.main_still }}" class="intro-img" alt="">
+    {% endfor %}
 </div>
 
+<div class="content-area hidden-content">
+    <img class="intro-img project-img" src="" alt="project image">
+</div>
+
+<div class="feature-container">
+    {% assign projects = site.projects | where_exp: "page", "page.highlight == true" %}
+    {% for project in projects limit:1 %}
+    <div class="info-grid active">
+        <div class="feature-title"><u>{{ project.title }}</u></div>
+        <div class="feature-info">
+            <span>Directed by {{project.director}}</span><br> 
+            <span>Written by {{project.writer}}</span>
+        </div>
+    </div>
+    {% endfor %}
+    {% for project in projects offset:1 %}
+    <div class="info-grid">
+        <div class="feature-title"><u>{{ project.title }}</u></div>
+        <div class="feature-info">
+            {% if project.director != '' %}
+            <span>Directed by {{project.director}}</span><br>
+            {% endif %} 
+            {% if project.writer != '' %}
+            <span>Written by {{project.writer}}</span>
+            {% endif %} 
+        </div>
+    </div>
+    {% endfor %}
+</div>
 
 <script>
 
-const highlightimg = new Array();
-{% for project in site.projects %}
-    {% if project.highlight == true %}
-        highlightimg.push("{{ site.baseurl }}{{ project.main_still }}");
-    {% endif %}
-{% endfor %}
-
-
-var intervalID = window.setInterval(swapImages, 5000);
-
-var i = 0;
-$(".intro-img").attr('src', highlightimg[i]);
-function swapImages() {
-    i++;
-    if (i == highlightimg.length) {
-        i = 0;
-    }
-    $(".intro-img").fadeOut("slow", function () {
-        $(this).attr('src', highlightimg[i]);
-        $(this).fadeIn("slow");
+function cycleImages(){
+    var $active = $('.content-area .active');
+    var $next = ($active.next().length > 0) ? $active.next() : $('.content-area img:first');
+    $next.css('z-index',2);//move the next image up the pile
+    $active.fadeOut(1500,function(){//fade out the top image
+        $active.css('z-index',1).show().removeClass('active');//reset the z-index and unhide the image
+        $next.css('z-index',3).addClass('active');//make the next image the top one
+    });
+    var $activeB = $('.feature-container .active');
+    var $nextB = ($activeB.next().length > 0) ? $activeB.next() : $('.feature-container div:first');
+    $nextB.css('z-index',2);//move the next image up the pile
+    $activeB.fadeOut(1500,function(){//fade out the top image
+        $activeB.css('z-index',1).show().removeClass('active');//reset the z-index and unhide the image
+        $nextB.css('z-index',3).addClass('active');//make the next image the top one
     });
 }
 
+$(document).ready(function(){
+setInterval('cycleImages()', 5000);
+})
+
+$('.projects').mouseover(function (e) {
+    imageData = e.target.getAttribute('data-hover')
+    $('.project-img').attr('src' , imageData)
+    $('.info-grid').hide()
+    $('.slideshow-content').hide() 
+    $('.hidden-content').show() 
+});
+$('.projects').mouseout(function (e) {
+    $('.info-grid').show()
+    $('.slideshow-content').show() 
+    $('.hidden-content').hide() 
+});
 
 
-
-    $('.projects').hover(function (e) {
-        imageData = e.target.getAttribute('data-hover')
-        $('.intro-img').attr('src' , imageData)
-        $('.info-grid').hide()
-        clearInterval(intervalID); 
-    });
 
 </script>
