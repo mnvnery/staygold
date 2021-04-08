@@ -9,6 +9,8 @@ sections:
   label: Projects
   create: all
   match: "**/*"
+- type: heading
+  label: Pages
 - type: document
   path: about.html
   label: About
