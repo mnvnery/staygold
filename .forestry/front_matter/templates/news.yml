@@ -5,3 +5,11 @@ fields:
 - type: text
   name: layout
   label: layout
+  hidden: true
+- name: news
+  type: blocks
+  label: News
+  template_types: []
+  config:
+    min: 
+    max: 
