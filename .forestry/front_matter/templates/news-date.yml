@@ -1,0 +1,10 @@
+---
+label: News Date
+hide_body: true
+fields:
+- name: date
+  type: text
+  config:
+    required: false
+  label: Date
+  description: 'Example format: January 2020'
