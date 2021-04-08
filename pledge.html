@@ -54,9 +54,18 @@ signatures:
     </div>
 <div></div>
 </div>   
-<div class="content-area">
-  <div class="content-about">
+<div class="content-area content-scroll">
+  <div class="content-pledge">
     <h1><u>Our Pledge</u></h1>
-    <div>{{ page.body }}</div>
-  </div>
+    <div class="pledge-body">{{ page.body }}</div>
+      <div class="signature-flex">
+      {% for signature in page.signatures %}
+        <div style="text-align: center;">
+          <img src="{{ site.baseurl }}/{{ signature.signature_image }}" alt="signature" class="signature-img"><br>
+          <p class="signature-description">{{ signature.name }}</p>
+          <p class="signature-description signature-position">{{ signature.position }}</p> 
+        </div>  
+      {% endfor %}
+      </div>
+    </div>
 </div>
