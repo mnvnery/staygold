@@ -1,5 +1,6 @@
 .project-flex
     display: flex
+    flex-direction: column
 
 .project-details
     width: 60vw
@@ -8,10 +9,6 @@
 .project-details p
     margin: 0
 
-.project-synopsis
-    margin-left: 3vw
-    width: 80vw
-
 .content-scroll
     overflow: scroll
 
@@ -19,5 +16,17 @@
     margin-top: 2vh
 
 .project-images img
-    width: 69vw
+    width: 86vw
     margin-bottom: 1vh
+
+
+@media only screen and (min-width: 835px)
+    .project-images img
+        width: 69vw
+
+    .project-flex
+        flex-direction: row
+
+    .project-synopsis
+        margin-left: 3vw
+        width: 80vw
