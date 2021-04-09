@@ -25,7 +25,7 @@ project_order:
                 <li class="projects-drop"><a href="#">Projects</a></li>
                 {% assign projects = site.projects | sort: 'title' %}
                 {% for project in projects %} 
-                <li class="projects"><a href="{{ site.baseurl }}{{ project.url }}" data-hover="{{ site.baseurl }}{{ project.main_still }}">{{ project.title }}</a></li>
+                <li class="projects"><a href="{{ site.baseurl }}{{ project.url }}" data-hover="{{ site.baseurl }}/{{ project.main_still }}">{{ project.title }}</a></li>
                 {% endfor %} 
                 <li><a href="{{ site.baseurl }}/news">News</a></li>
                 <li><a href="{{ site.baseurl }}/contact">Contact</a></li>
@@ -37,10 +37,10 @@ project_order:
 <div class="content-area slideshow-content">
     {% assign projects = site.projects | where_exp: "page", "page.highlight == true" %}
     {% for project in projects limit:1 %}
-        <img src="{{ site.baseurl }}{{ project.main_still }}" class="intro-img active" alt="">
+        <img src="{{ site.baseurl }}/{{ project.main_still }}" class="intro-img active" alt="">
     {% endfor %}
     {% for project in projects offset:1 %}
-        <img src="{{ site.baseurl }}{{ project.main_still }}" class="intro-img" alt="">
+        <img src="{{ site.baseurl }}/{{ project.main_still }}" class="intro-img" alt="">
     {% endfor %}
 </div>
 
