@@ -92,12 +92,12 @@ setInterval('cycleImages()', 5000);
 $('.projects').mouseover(function (e) {
     imageData = e.target.getAttribute('data-hover')
     $('.project-img').attr('src' , imageData)
-    $('.info-grid').hide()
+    $('.feature-container').hide()
     $('.slideshow-content').hide() 
     $('.hidden-content').show() 
 });
 $('.projects').mouseout(function (e) {
-    $('.info-grid').show()
+    $('.feature-container').show()
     $('.slideshow-content').show() 
     $('.hidden-content').hide() 
 });
