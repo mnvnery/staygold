@@ -8,14 +8,6 @@ project_order:
 - _projects/under-the-silver-lake.html
 - _projects/the-strange-ones.html
 - _projects/a-ciambra.html
-projects:
-- _projects/together-together.html
-- _projects/harriet.html
-- _projects/honey-boy.html
-- _projects/patti-cake.html
-- _projects/under-the-silver-lake.html
-- _projects/the-strange-ones.html
-- _projects/a-ciambra.html
 
 ---
 <div class="mobile-grid">
@@ -31,7 +23,8 @@ projects:
                 <li><a href="{{ site.baseurl }}/about">About</a> </li>
                 <li><a href="{{ site.baseurl }}/pledge">Our Pledge</a></li>
                 <li class="projects-drop"><a href="#">Projects</a></li>
-                {% for project in site.projects %} 
+                {% assign projects = site.projects | sort: 'title' %}
+                {% for project in projects %} 
                 <li class="projects"><a href="{{ site.baseurl }}{{ project.url }}" data-hover="{{ site.baseurl }}{{ project.main_still }}">{{ project.title }}</a></li>
                 {% endfor %} 
                 <li><a href="{{ site.baseurl }}/news">News</a></li>
