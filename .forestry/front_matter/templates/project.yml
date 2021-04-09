@@ -51,6 +51,28 @@ fields:
   config:
     maxSize: 64
   label: Main Still
+- name: order
+  type: select
+  default: []
+  config:
+    required: false
+    options:
+    - '1'
+    - '2'
+    - '3'
+    - '4'
+    - '5'
+    - '6'
+    - '7'
+    - '8'
+    - '9'
+    - '10'
+    source:
+      type: simple
+      section: 
+      file: 
+      path: 
+  label: Order
 pages:
 - _projects/a-ciambra.html
 - _projects/harriet.html
