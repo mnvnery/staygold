@@ -8,10 +8,6 @@
     padding: 5vw 5vw
     border-top: 1px solid black
     min-height: 10vh
-    width: 90vw
-
-.feature-container
-    width: 100vw
 
 .feature-title
     font-size: 5.5vw
@@ -39,6 +35,9 @@
 .info-grid.active
     z-index: 3
 
+@media screen and(max-width: 835px)
+    .info-grid
+        width: 90vw
 
 @media screen and(min-width: 835px)
     .intro-img
@@ -51,6 +50,7 @@
     .feature-info
         font-size: 1vw
         line-height: 1.5vw
+        margin-left: 8vw
     
     .feature-title
         font-size: 1.4vw
