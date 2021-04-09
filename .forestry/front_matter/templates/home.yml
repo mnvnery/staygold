@@ -16,3 +16,5 @@ fields:
       type: pages
       section: projects
   label: Projects
+pages:
+- index.html
