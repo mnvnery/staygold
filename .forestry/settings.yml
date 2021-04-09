@@ -14,7 +14,6 @@ sections:
 - type: document
   path: index.html
   label: Home
-  match: "**/*"
 - type: document
   path: about.html
   label: About

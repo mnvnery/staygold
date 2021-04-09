@@ -1,0 +1,15 @@
+---
+label: Home
+hide_body: false
+fields:
+- type: text
+  name: layout
+  label: layout
+  hidden: true
+- name: project_order
+  type: blocks
+  template_types: []
+  config:
+    min: 
+    max: 
+  label: Project Order
