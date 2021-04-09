@@ -16,10 +16,5 @@ fields:
       type: pages
       section: projects
   label: Project Order
-- name: order
-  type: include
-  config: {}
-  template: project
-  label: Order
 pages:
 - index.html
