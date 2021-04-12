@@ -56,7 +56,7 @@ fields:
   config:
     required: false
   label: image-align
-  hidden: false
+  hidden: true
 pages:
 - _projects/a-ciambra.html
 - _projects/harriet.html
