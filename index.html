@@ -37,10 +37,10 @@ project_order:
 <div class="content-area slideshow-content">
     {% assign projects = site.projects | where_exp: "page", "page.highlight == true" %}
     {% for project in projects limit:1 %}
-        <img src="{{ site.baseurl }}/{{ project.main_still }}" class="intro-img active" alt="">
+        <img src="{{ site.baseurl }}/{{ project.main_still }}" class="intro-img active" style="object-fit:{{ project.image-align }}" alt="">
     {% endfor %}
     {% for project in projects offset:1 %}
-        <img src="{{ site.baseurl }}/{{ project.main_still }}" class="intro-img" alt="">
+        <img src="{{ site.baseurl }}/{{ project.main_still }}" class="intro-img" style="object-fit:{{ project.image-align }}" alt="">
     {% endfor %}
 </div>
 
