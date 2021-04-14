@@ -22,9 +22,9 @@ project_order:
                 <li><a href="{{ site.baseurl }}/index"><u>Stay Gold Features</u></a></li>
                 <li><a href="{{ site.baseurl }}/about">About</a> </li>
                 <li><a href="{{ site.baseurl }}/pledge">Our Pledge</a></li>
-                <li class="projects-drop"><a href="#">Projects</a></li>
-                {% assign projects = site.projects | sort: 'title' %}
-                {% for project in projects %} 
+                <li><a href="#" class="projects-drop">Projects</a></li>
+                {% assign projects = site.projects | sort: 'release_year' %}
+                {% for project in projects reversed %} 
                 <li class="projects"><a href="{{ site.baseurl }}{{ project.url }}" data-hover="{{ site.baseurl }}/{{ project.main_still }}">{{ project.title }}</a></li>
                 {% endfor %} 
                 <li><a href="{{ site.baseurl }}/news">News</a></li>
@@ -52,7 +52,7 @@ project_order:
     {% assign projects = site.projects | where_exp: "page", "page.highlight == true" %}
     {% for project in projects limit:1 %}
     <div class="info-grid active">
-        <div class="feature-title"><u>{{ project.title }}</u></div>
+        <div class="feature-title"><a href="{{ site.baseurl }}{{ project.url }}"><u>{{ project.title }}</u></a></div>
         <div class="feature-info">
             <span>Directed by {{project.director}}</span><br> 
             <span>Written by {{project.writer}}</span>
@@ -61,7 +61,7 @@ project_order:
     {% endfor %}
     {% for project in projects offset:1 %}
     <div class="info-grid">
-        <div class="feature-title"><u>{{ project.title }}</u></div>
+        <div class="feature-title"><a href="{{ site.baseurl }}{{ project.url }}"><u>{{ project.title }}</u></a></div>
         <div class="feature-info">
             {% if project.director != '' %}
             <span>Directed by {{project.director}}</span><br>

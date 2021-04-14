@@ -2,6 +2,10 @@ $( ".projects-drop" ).click(function() {
     $(".projects").toggleClass("projects-open");
 });
 
+$( ".projects-drop" ).mouseover(function() {
+    $(".projects").addClass("projects-open");
+});
+
 
 // On click
 $( ".hamburger" ).click(function() {
