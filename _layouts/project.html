@@ -34,13 +34,16 @@ layout: default
         <div class="project-flex">
             <div class="project-details">
                 {% if page.director != '' %}
-                    <p>Director: {{ page.director }}</p>
+                    <p>Director: {{ page.director }}</p><br>
                 {% endif %}
                 {% if page.writer != '' %}
-                    <p>Writer: {{ page.writer }}</p>
+                    <p>Writer: {{ page.writer }}</p><br>
                 {% endif %}
                 {% if page.cast != '' %}
-                    <p>Cast: {{ page.cast}}</p>
+                    <p>Cast: {{ page.cast}}</p><br>
+                {% endif %}
+                {% if page.produced != '' %}
+                    <p>Produced with: {{ page.produced }}</p><br>
                 {% endif %}
             </div>
             <div class="project-synopsis">
