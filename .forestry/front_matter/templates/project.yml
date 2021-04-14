@@ -7,6 +7,13 @@ fields:
   config:
     required: false
   label: Title
+- name: date
+  type: text
+  config:
+    required: false
+  label: Release Year
+  hidden: false
+  description: This won't show up on the page. Use it to order the projects.
 - name: highlight
   type: boolean
   label: Highlight
@@ -57,12 +64,6 @@ fields:
   config:
     required: false
   label: image-align
-  hidden: true
-- name: date
-  type: text
-  config:
-    required: false
-  label: Release Year
   hidden: true
 pages:
 - _projects/a-ciambra.html
