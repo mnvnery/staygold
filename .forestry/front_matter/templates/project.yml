@@ -29,14 +29,22 @@ fields:
       format: html-blocks
   label: Director
 - name: writer
-  type: text
+  type: textarea
+  default: ''
   config:
     required: false
+    wysiwyg: true
+    schema:
+      format: html-blocks
   label: Writer
 - name: cast
-  type: text
+  type: textarea
+  default: ''
   config:
     required: false
+    wysiwyg: true
+    schema:
+      format: html-blocks
   label: Cast
 - name: synopsis
   type: textarea
