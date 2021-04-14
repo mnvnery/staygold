@@ -16,5 +16,3 @@ fields:
       type: pages
       section: projects
   label: Project Order
-pages:
-- index.html
