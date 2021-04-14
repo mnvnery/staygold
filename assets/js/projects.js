@@ -6,6 +6,11 @@ $( ".projects-drop" ).mouseover(function() {
     $(".projects").addClass("projects-open");
 });
 
+$( ".pledge" ).mouseover(function() {
+    $(".projects").removeClass("projects-open");
+});
+
+
 $('a').attr('target', function() {
     if(this.host == location.host) return '_self'
     else return '_blank'
