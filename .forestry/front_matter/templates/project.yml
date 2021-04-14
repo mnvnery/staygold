@@ -26,7 +26,7 @@ fields:
     required: false
     wysiwyg: true
     schema:
-      format: html-blocks
+      format: html
   label: Director
 - name: writer
   type: text
