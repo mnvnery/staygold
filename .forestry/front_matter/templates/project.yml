@@ -21,7 +21,7 @@ fields:
   default: false
 - name: director
   type: textarea
-  default: "<p>Directed by:</p>"
+  default: "<p></p>"
   config:
     required: false
     wysiwyg: true
