@@ -20,9 +20,13 @@ fields:
   description: Should this project be highlighted on the home page?
   default: false
 - name: director
-  type: text
+  type: textarea
+  default: ''
   config:
     required: false
+    wysiwyg: true
+    schema:
+      format: html-blocks
   label: Director
 - name: writer
   type: text
