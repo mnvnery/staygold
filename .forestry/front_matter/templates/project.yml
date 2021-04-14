@@ -54,7 +54,7 @@ fields:
     wysiwyg: true
     schema:
       format: html-blocks
-  label: Produced
+  label: Produced With
 - name: synopsis
   type: textarea
   default: ''
