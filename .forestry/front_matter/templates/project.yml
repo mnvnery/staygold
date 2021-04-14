@@ -42,6 +42,7 @@ fields:
     required: false
   label: Watch
   description: 'Info about viewing platforms '
+  hidden: true
 - name: stills
   type: image_gallery
   config: {}
