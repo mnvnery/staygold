@@ -6,6 +6,10 @@ $( ".projects-drop" ).mouseover(function() {
     $(".projects").addClass("projects-open");
 });
 
+$('a').attr('target', function() {
+    if(this.host == location.host) return '_self'
+    else return '_blank'
+});
 
 // On click
 $( ".hamburger" ).click(function() {
