@@ -11,6 +11,15 @@ fields:
   config:
     required: false
   label: Phone Number
+- name: extra_information
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: Extra Information
 - name: address
   type: textarea
   default: ''
