@@ -21,13 +21,13 @@ project_order:
             <ul>
                 <li><a href="{{ site.baseurl }}/index"><u>Stay Gold Features</u></a></li>
                 <li><a href="{{ site.baseurl }}/about">About</a> </li>
-                <li><a href="{{ site.baseurl }}/pledge">Our Pledge</a></li>
+                <li><a href="{{ site.baseurl }}/pledge" class="pledge">Our Pledge</a></li>
                 <li><a href="#" class="projects-drop">Projects</a></li>
                 {% assign projects = site.projects | sort: 'release_year' %}
                 {% for project in projects reversed %} 
                 <li class="projects"><a href="{{ site.baseurl }}{{ project.url }}" data-hover="{{ site.baseurl }}/{{ project.main_still }}">{{ project.title }}</a></li>
                 {% endfor %} 
-                <li><a href="{{ site.baseurl }}/news">News</a></li>
+                <li><a href="{{ site.baseurl }}/news" class="news">News</a></li>
                 <li><a href="{{ site.baseurl }}/contact">Contact</a></li>
             </ul>
         </div>
