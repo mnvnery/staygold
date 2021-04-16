@@ -15,7 +15,8 @@ layout: default
             <li><a href="{{ site.baseurl }}/about">About</a> </li>
             <li><a href="{{ site.baseurl }}/pledge">Our Pledge</a></li>
             <li><a href="#" class="projects-drop">Projects</a></li>
-            {% for project in site.projects %}
+            {% assign projects = site.projects | sort: 'release_year' %}
+            {% for project in projects reversed %}
                 {% if project.title == page.title %}
                 <li class="projects projects-open" data-hover="{{ site.baseurl }}{{ project.main_still }}"><a href="{{ site.baseurl }}{{ project.url }}"><u>{{ project.title }}</u></a></li>
                 {% else %} 
