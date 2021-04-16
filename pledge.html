@@ -60,7 +60,7 @@ signatures:
     <div class="pledge-body">{{ page.body }}</div>
       <div class="signature-flex">
       {% for signature in page.signatures %}
-        <div style="text-align: center;">
+        <div style="text-align: center;" class="signature-div">
           <img src="{{ site.baseurl }}/{{ signature.signature_image }}" alt="signature" class="signature-img"><br>
           <p class="signature-description">{{ signature.name }}</p>
           <p class="signature-description signature-position">{{ signature.position }}</p> 
