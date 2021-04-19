@@ -39,8 +39,19 @@ twitter_link: https://twitter.com/sgfeatures
             <div class="extra-info">{{ page.extra_information }}</div>
             <div class="address">{{ page.address }}</div>
             <div id='map'></div>
-        </div>
-    </div>
+            <div class="social-icons">
+                <p> 
+                    {% if page.facebook_link != '' %}
+                        <a href="{{ site.baseurl }}{{ page.facebook_link }}"><u>Facebook</u></a> / 
+                    {% endif %}
+                    {% if page.instagram_link != '' %}
+                        <a href="{{ site.baseurl }}{{ page.instagram_link }}"><u>Instagram</u></a> / 
+                    {% endif %}
+                    {% if page.twitter_link != '' %}
+                        <a href="{{ site.baseurl }}{{ page.twitter_link }}"><u>Twitter</u></a>
+                    {% endif %}
+                </p>
+            </div>
 </div>
 
 
