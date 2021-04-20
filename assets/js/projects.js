@@ -2,20 +2,22 @@ $( ".projects-drop" ).click(function() {
     $(".projects").toggleClass("projects-open");
 });
 
-$( ".projects-drop" ).mouseover(function() {
-    $(".projects").addClass("projects-open");
-});
+const mediaQuery = window.matchMedia("(min-width: 600px)")
+    if (mediaQuery.matches) {
+    $( ".projects-drop" ).mouseover(function() {
+        $(".projects").addClass("projects-open");
+    });
 
-$( ".pledge" ).mouseover(function() {
-    $(".projects").removeClass("projects-open");
-});
+    $( ".pledge" ).mouseover(function() {
+        $(".projects").removeClass("projects-open");
+    });
 
 
-$('a').attr('target', function() {
-    if(this.host == location.host) return '_self'
-    else return '_blank'
-});
-
+    $('a').attr('target', function() {
+        if(this.host == location.host) return '_self'
+        else return '_blank'
+    });
+}
 // On click
 $( ".hamburger" ).click(function() {
     // Toggle class "is-active"
