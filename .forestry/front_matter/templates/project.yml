@@ -86,6 +86,13 @@ fields:
     required: false
   label: image-align
   hidden: true
+- name: layout
+  type: text
+  config:
+    required: false
+  label: layout
+  default: project
+  hidden: true
 pages:
 - _projects/a-ciambra.html
 - _projects/harriet.html
