@@ -28,5 +28,3 @@ end
 gem "wdm", "~> 0.1.1", :platforms => [:mingw, :x64_mingw, :mswin]
 
 
-
-gem 'http_parser.rb', git: "git@github.com:tmm1/http_parser.rb.git"

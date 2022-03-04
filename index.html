@@ -25,7 +25,7 @@ project_order:
                 <li><a href="#" class="projects-drop">Projects</a></li>
                 {% assign projects = site.projects | sort: 'release_year' %}
                 {% for project in projects reversed %} 
-                <li class="projects"><a href="{{ site.baseurl }}{{ project.url }}" data-hover="{{ site.baseurl }}/{{ project.main_still }}">{{ project.title }}</a></li>
+                <li class="projects" data-hover="{{ site.baseurl }}/{{ project.main_still }}"><a href="{{ site.baseurl }}{{ project.url }}">{{ project.title }}</a></li>
                 {% endfor %} 
                 <li><a href="{{ site.baseurl }}/news" class="news">News</a></li>
                 <li><a href="{{ site.baseurl }}/contact">Contact</a></li>
@@ -98,12 +98,13 @@ setInterval('cycleImages()', 5000);
 })
 
 $('.projects').mouseover(function (e) {
-    imageData = e.target.getAttribute('data-hover')
+    imageData = $(this).attr('data-hover')
     $('.project-img').attr('src' , imageData)
     $('.feature-container').hide()
     $('.slideshow-content').hide() 
     $('.hidden-content').show() 
 });
+
 $('.projects').mouseout(function (e) {
     $('.feature-container').show()
     $('.slideshow-content').show() 
