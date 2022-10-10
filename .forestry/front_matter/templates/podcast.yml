@@ -10,6 +10,11 @@ fields:
     config:
       required: false
     label: Episode Title
+  - name: episode_date
+    type: text
+    config:
+      required: false
+    label: Episode Date
   - name: episode_guest
     type: textarea
     default: ''
