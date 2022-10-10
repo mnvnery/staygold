@@ -1,0 +1,38 @@
+---
+layout: default
+---
+<div class="mobile-grid">
+    <button class="hamburger hamburger--squeeze" type="button">
+        <span class="hamburger-box">
+        <span class="hamburger-inner"></span>
+        </span>
+    </button>
+    <div class="logo-section"><a href="{{ site.baseurl }}/index"><img src="{{ site.baseurl }}/assets/img/logo.svg" class="logo" alt="logo"></a></div>
+    <div class="menu">
+        <ul>
+            <li><a href="{{ site.baseurl }}/index">Stay Gold Features</a></li>
+            <li><a href="{{ site.baseurl }}/about">About</a> </li>
+            <li><a href="{{ site.baseurl }}/pledge" class="pledge">Our Pledge</a></li>
+            <li ><a href="#" class="projects-drop">Projects</a></li>
+            {% assign projects = site.projects | sort: 'release_year' %}
+            {% for project in projects reversed %}  
+            <li class="projects"><a href="{{ site.baseurl }}{{ project.url }}">{{ project.title }}</a></li>
+            {% endfor %} 
+            <li><a href="{{ site.baseurl }}/podcast"><u>Podcast</u></a></li>
+            <li><a href="{{ site.baseurl }}/news">News</a></li>
+            <li><a href="{{ site.baseurl }}/contact">Contact</a></li>
+        </ul>
+    </div>
+<div></div>
+</div>   
+<div class="content-area content-scroll">
+    <div class="content-news">
+        <h1><u>Podcast</u></h1>
+        {% for item in page.news %}
+        <h4 class="article-date"><u>{{ item.date }}</u></h4>
+            {% for article in item.article %}
+                <a href="{{ article.link }}" target="_blank"><p class="article-title">{{ article.title }}</p></a>
+            {% endfor %}
+        {% endfor %}
+    </div>
+</div>
