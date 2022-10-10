@@ -1,0 +1,34 @@
+.podcast-info, .podcasts-links
+    margin-left: 1.5vw
+
+.podcasts-links
+    margin-top: 2em
+    margin-bottom: 2em
+
+.pod-link
+    text-decoration: underline
+    margin-right: 1em
+
+.title-flex
+    display: flex
+    flex-direction: column-reverse
+
+.pod-link:hover
+    text-decoration: underline
+
+@media only screen and (max-width: 835px)
+    .article-date
+        margin-top: 0.5em
+
+    .podcast-info, .podcasts-links
+        margin-left: 2.5vw
+
+@media only screen and (min-width: 835px)
+    .podcast-info 
+        max-width: 60vw
+
+    .title-flex
+        max-width: 60vw
+        flex-direction: row
+        justify-content: space-between
+        align-items: center
