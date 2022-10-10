@@ -23,6 +23,7 @@ podcast_episodes:
     Hathaway's career. Debra shares insights into breaking boundaries, forging your
     own path, what it means to be a leader, and provides glimpses into some of the
     behind the scenes magic from set.</p>"
+  episode_date: "28 September"
   links:
   - name: Google Podcasts
     link: https://podcasts.google.com/feed/aHR0cHM6Ly93d3cuc3ByZWFrZXIuY29tL3Nob3cvNTY3MDU4NC9lcGlzb2Rlcy9mZWVk/episode/aHR0cHM6Ly9hcGkuc3ByZWFrZXIuY29tL2VwaXNvZGUvNTE0MDE5NjI?sa=X&ved=0CAUQkfYCahcKEwiIpovfpdX6AhUAAAAAHQAAAAAQAg&hl=en-PT
@@ -84,11 +85,17 @@ podcast_episodes:
 <div class="content-area content-scroll">
     <div class="content-news">
         <h1><u>Podcast</u></h1>
-        {% for item in page.news %}
-        <h4 class="article-date"><u>{{ item.date }}</u></h4>
-            {% for article in item.article %}
-                <a href="{{ article.link }}" target="_blank"><p class="article-title">{{ article.title }}</p></a>
-            {% endfor %}
+        {% for item in page.podcast_episodes %}
+        <div class="title-flex">
+          <h4 class="article-date"><u>{{ item.episode_title }}</u></h4>
+          <div>{{ item.episode_date }}</div>
+        </div>
+        <div class="podcast-info">{{ item.episode_guest }}</div>
+        <div class="podcasts-links">
+          {% for item in item.links %}
+            <a href="{{ item.link }}" class="pod-link">{{item.name}}</a>
+          {% endfor %}
+        </div>
         {% endfor %}
     </div>
 </div>
