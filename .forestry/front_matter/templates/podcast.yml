@@ -2,21 +2,29 @@
 label: Podcast
 hide_body: true
 fields:
-- name: episode_title
-  type: text
+- name: podcast_episodes
+  type: field_group_list
+  fields:
+  - name: episode_title
+    type: text
+    config:
+      required: false
+    label: Episode Title
+  - name: episode_guest
+    type: textarea
+    default: ''
+    config:
+      required: false
+      wysiwyg: true
+      schema:
+        format: html-blocks
+    label: Episode Guest
+  - name: links
+    type: tag_list
+    default: []
+    label: Links
   config:
-    required: false
-  label: Episode Title
-- name: episode_guest
-  type: textarea
-  default: ''
-  config:
-    required: false
-    wysiwyg: true
-    schema:
-      format: html-blocks
-  label: Episode Guest
-- name: links
-  type: tag_list
-  default: []
-  label: Links
+    min: 
+    max: 
+    labelField: 
+  label: Podcast Episodes
