@@ -15,7 +15,6 @@ sections:
 - type: document
   path: podcast.html
   label: Podcast
-  match: "**/*"
 - type: document
   path: news.html
   label: News
