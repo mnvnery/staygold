@@ -23,7 +23,7 @@ fields:
       wysiwyg: true
       schema:
         format: html-blocks
-    label: Episode Guest
+    label: Episode Info
   - name: links
     type: field_group_list
     fields:
