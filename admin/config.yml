@@ -1,6 +1,6 @@
 backend:
   name: git-gateway
-  branch: main
+  branch: master
 
 media_folder: "assets/img"
 
@@ -94,17 +94,6 @@ collections:
         editor:
           preview: false
         fields:
-          - name: podcast_episodes
-            label: Podcast Episodes
-            widget: list 
-            editor:
-      preview: false
-      - label: "News"
-        name: "news"
-        file: "news.html"
-        editor:
-          preview: false
-        fields:
           - name: layout
             label: "Layout"
             widget: hidden
@@ -128,6 +117,7 @@ collections:
                     widget: string
       - name: "contacts"
         label: "Contacts"
+        file: 'contact.html'
         editor:
           preview: false
         fields:
@@ -159,7 +149,7 @@ collections:
     folder: '_projects'
     create: true
     extension: html
-    slug: {{slug}}
+    slug: '{{slug}}'
     editor:
       preview: false
     fields:
