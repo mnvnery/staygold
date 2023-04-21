@@ -1,0 +1,133 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "assets/img"
+
+
+collections:
+  - name: "pages"
+    label: "pages"
+    editor:
+      preview: false
+    files:
+      - label: "About"
+        name: "about"
+        file: "about.html"
+        editor:
+          preview: false
+        fields:
+          - name: what
+            label: 'What We Do'
+            widget: markdown
+            modes: [rich_text]
+          - name: who
+            label: 'Team Members'
+            widget: list 
+            fields:
+              - name: name
+                label: Name
+                widget: string 
+              - name: position
+                label: Position
+                widget: string 
+              - name: description
+                label: Description
+                widget: markdown
+                modes: [rich_text]
+      - label: "Pledge"
+        name: "pledge"
+        file: "pledge.html"
+        editor:
+          preview: false
+        fields:
+          - name: body
+            label: 'Content'
+            widget: markdown
+            modes: [rich_text]
+          - name: signatures
+            label: Signatures
+            widget: list 
+            fields:
+              - name: signature_image
+                label: Signature Image
+                widget: image
+              - name: name
+                label: Name
+                widget: string 
+              - name: position
+                label: Position
+                widget: string
+      - label: "Podcast"
+        name: "podcast"
+        file: "podcast.html"
+        editor:
+          preview: false
+        fields:
+          - name: podcast_episodes
+            label: Podcast Episodes
+            widget: list 
+            fields:
+              - name: episode_title
+                label: Episode Title
+                widget: string
+              - name: episode_date
+                label: Episode Date
+                widget: string
+              - name: episode_guest
+                label: Episode Info
+                widget: markdown
+                mode: [rich_text]
+              - name: links
+                label: Links
+                widget: list
+                fields:
+                  - name: name
+                    label: Name
+                    widget: string
+                  - name: link
+                    label: Link
+                    widget: string
+      - label: "News"
+        name: "news"
+        file: "news.html"
+        editor:
+          preview: false
+        fields:
+          - name: podcast_episodes
+            label: Podcast Episodes
+            widget: list 
+            editor:
+      preview: false
+    files:
+      - label: "News"
+        name: "news"
+        file: "news.html"
+        editor:
+          preview: false
+        fields:
+          - name: layout
+            label: "Layout"
+            widget: hidden
+          - name: news
+            label: "News"
+            widget: list
+            fields:
+              - name: date
+                label: "Date"
+                widget: string
+                hint: "Month + Year of the Articles. Example format: January 2021"
+              - name: article
+                label: "Article"
+                widget: list
+                fields:
+                  - name: title
+                    label: "Title"
+                    widget: string
+                  - name: link
+                    label: "Link"
+                    widget: string
+                
+        
+
+        
