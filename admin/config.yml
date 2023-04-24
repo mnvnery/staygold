@@ -7,7 +7,7 @@ media_folder: "assets/img"
 
 collections:
   - name: "pages"
-    label: "pages"
+    label: "Pages"
     editor:
       preview: false
     files:
@@ -41,7 +41,7 @@ collections:
         editor:
           preview: false
         fields:
-          - name: body
+          - name: main_text
             label: 'Content'
             widget: markdown
             modes: [rich_text]
@@ -154,44 +154,49 @@ collections:
       preview: false
     fields:
       - name: title
-        type: text
+        widget: string
         label: Title
         required: true
       - name: release_year
-        type: text
+        widget: string
         label: Release Year
         required: true
       - name: highlight
-        type: boolean
+        widget: boolean
         label: Highlight
         description: Should this project be highlighted on the home page?
         default: false
       - name: director
-        type: textarea
+        widget: markdown
+        modes: [rich_text]
         label: Director
         required: true
       - name: writer
-        type: textarea
+        widget: markdown
+        modes: [rich_text]
         label: Writer
         required: true
       - name: cast
-        type: textarea
+        widget: markdown
+        modes: [rich_text]
         label: Cast
         required: true
       - name: produced
-        type: textarea
+        widget: markdown
+        modes: [rich_text]
         label: Produced With
         required: true
       - name: synopsis
-        type: markdown
+        widget: markdown
+        modes: [rich_text]
         label: Synopsis
         required: true
       - name: watch
-        type: text
+        widget: string
         label: Watch
         description: Info about viewing platforms
       - name: stills
-        type: image
+        widget: image
         label: Stills
         of: image
         required: true
@@ -199,15 +204,15 @@ collections:
           config:
             multiple: true
       - name: main_still
-        type: image
+        widget: image
         label: Main Still
         required: true
       - name: image-align
-        type: text
+        widget: string
         label: Image Alignment
         required: false
       - name: layout
-        type: text
+        widget: string
         label: Layout
         default: project
         required: false
