@@ -1,0 +1,220 @@
+backend:
+  name: git-gateway
+  branch: master
+
+media_folder: "assets/img"
+
+
+collections:
+  - name: "pages"
+    label: "pages"
+    editor:
+      preview: false
+    files:
+      - label: "About"
+        name: "about"
+        file: "about.html"
+        editor:
+          preview: false
+        fields:
+          - name: what
+            label: 'What We Do'
+            widget: markdown
+            modes: [rich_text]
+          - name: who
+            label: 'Team Members'
+            widget: list 
+            fields:
+              - name: name
+                label: Name
+                widget: string 
+              - name: position
+                label: Position
+                widget: string 
+              - name: description
+                label: Description
+                widget: markdown
+                modes: [rich_text]
+      - label: "Pledge"
+        name: "pledge"
+        file: "pledge.html"
+        editor:
+          preview: false
+        fields:
+          - name: body
+            label: 'Content'
+            widget: markdown
+            modes: [rich_text]
+          - name: signatures
+            label: Signatures
+            widget: list 
+            fields:
+              - name: signature_image
+                label: Signature Image
+                widget: image
+              - name: name
+                label: Name
+                widget: string 
+              - name: position
+                label: Position
+                widget: string
+      - label: "Podcast"
+        name: "podcast"
+        file: "podcast.html"
+        editor:
+          preview: false
+        fields:
+          - name: podcast_episodes
+            label: Podcast Episodes
+            widget: list 
+            fields:
+              - name: episode_title
+                label: Episode Title
+                widget: string
+              - name: episode_date
+                label: Episode Date
+                widget: string
+              - name: episode_guest
+                label: Episode Info
+                widget: markdown
+                mode: [rich_text]
+              - name: links
+                label: Links
+                widget: list
+                fields:
+                  - name: name
+                    label: Name
+                    widget: string
+                  - name: link
+                    label: Link
+                    widget: string
+      - label: "News"
+        name: "news"
+        file: "news.html"
+        editor:
+          preview: false
+        fields:
+          - name: layout
+            label: "Layout"
+            widget: hidden
+          - name: news
+            label: "News"
+            widget: list
+            fields:
+              - name: date
+                label: "Date"
+                widget: string
+                hint: "Month + Year of the Articles. Example format: January 2021"
+              - name: article
+                label: "Article"
+                widget: list
+                fields:
+                  - name: title
+                    label: "Title"
+                    widget: string
+                  - name: link
+                    label: "Link"
+                    widget: string
+      - name: "contacts"
+        label: "Contacts"
+        file: 'contact.html'
+        editor:
+          preview: false
+        fields:
+          - name: layout
+            label: layout
+            widget: hidden
+          - name: phone_number
+            label: Phone Number
+            widget: string
+          - name: extra_information
+            label: Extra Information
+            widget: markdown
+            modes: [rich_text]
+          - name: address
+            label: Address
+            widget: markdown
+            modes: [rich_text]
+          - name: facebook_link
+            label: Facebook Link
+            widget: string
+          - name: instagram_link
+            label: Instagram Link
+            widget: string
+          - name: twitter_link
+            label: Twitter Link
+            widget: string
+  - name: 'projects'
+    label: 'Projects'
+    folder: '_projects'
+    create: true
+    extension: html
+    slug: '{{slug}}'
+    editor:
+      preview: false
+    fields:
+      - name: title
+        type: text
+        label: Title
+        required: true
+      - name: release_year
+        type: text
+        label: Release Year
+        required: true
+      - name: highlight
+        type: boolean
+        label: Highlight
+        description: Should this project be highlighted on the home page?
+        default: false
+      - name: director
+        type: textarea
+        label: Director
+        required: true
+      - name: writer
+        type: textarea
+        label: Writer
+        required: true
+      - name: cast
+        type: textarea
+        label: Cast
+        required: true
+      - name: produced
+        type: textarea
+        label: Produced With
+        required: true
+      - name: synopsis
+        type: markdown
+        label: Synopsis
+        required: true
+      - name: watch
+        type: text
+        label: Watch
+        description: Info about viewing platforms
+      - name: stills
+        type: image
+        label: Stills
+        of: image
+        required: true
+        media_library:
+          config:
+            multiple: true
+      - name: main_still
+        type: image
+        label: Main Still
+        required: true
+      - name: image-align
+        type: text
+        label: Image Alignment
+        required: false
+      - name: layout
+        type: text
+        label: Layout
+        default: project
+        required: false
+        hidden: true
+
+
+            
+        
+
+        
