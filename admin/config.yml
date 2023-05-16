@@ -208,11 +208,11 @@ collections:
         label: Main Still
         required: true
       - name: image-align
-        widget: string
+        widget: hidden
         label: Image Alignment
         required: false
       - name: layout
-        widget: string
+        widget: hidden
         label: Layout
         default: project
         required: false
