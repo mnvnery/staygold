@@ -2,7 +2,7 @@
 layout: default
 what: >-
   We are a production and financing company founded by Daniela Taplin Lundberg.
-  Our name comes from Johnny Cade's last words to Ponyboy in *The Outsiders*:
+  Our name comes from Johnny Cade&rsquo;s last words to Ponyboy in *The Outsiders*:
   “Stay gold, Ponyboy. Stay gold.”
 
 
@@ -12,8 +12,8 @@ who:
     position: Producer/Founder
     description: Producer Daniela Taplin Lundberg is the Founder of Stay Gold
       Features, an independent film finance and production company. Her recent
-      producing credits include Kasi Lemmons’ *Harriet*, starring Cynthia Erivo
-      in an Oscar-nominated role and Alma Har’el’s *Honey Boy* which was
+      producing credits include Kasi Lemmons&rsquo; *Harriet*, starring Cynthia Erivo
+      in an Oscar-nominated role and Alma Har&rsquo;el&rsquo;s *Honey Boy* which was
       nominated for four Indie Spirit Awards. She also produced *Together
       Together* starring Ed Helms and Patti Harrison, directed by Nikole
       Beckwith, which premiered at the 2021 Sundance Film Festival in the
@@ -39,8 +39,8 @@ who:
       premiered at the 2020 Toronto International Film Festival, and is an
       Executive Producer on Ed Helms-starrer *Together Together*. Prior to
       joining Stay Gold, Cammarata was the Creative Executive at Jake
-      Gyllenhaal's company Nine Stories Productions where she worked closely
-      with producer Riva Marker on David Gordon Green's *Stronger*, Paul Dano's
+      Gyllenhaal&rsquo;s company Nine Stories Productions where she worked closely
+      with producer Riva Marker on David Gordon Green&rsquo;s *Stronger*, Paul Dano&rsquo;s
       directing debut *Wildlife*, and the 2017 Broadway revival of Stephen
       Sondheim’s *Sunday In The Park With George*. Before Nine Stories,
       Cammarata was an executive at Red Crown Productions and her credits there
@@ -49,9 +49,9 @@ who:
   - name: Vanessa Mendal
     description: Vanessa joined Stay Gold in 2019. Before that, she worked at a
       Warner Media content incubator called OneFifty, where she helped develop
-      projects including HBO's Random Acts of Flyness. She also spent time at
+      projects including HBO&rsquo;s Random Acts of Flyness. She also spent time at
       Epix in content distribution, working with partners like Amazon, Hulu and
-      Sony Vue. Vanessa holds a BFA in Film &amp; TV from NYU's Tisch School of
+      Sony Vue. Vanessa holds a BFA in Film &amp; TV from NYU&rsquo;s Tisch School of
       the Arts. She likes cooking elaborate meals and eating them.
     position: Creative Executive
   - name: Emma Powers
@@ -90,13 +90,13 @@ who:
     <div class="content-about">
         <h1> <u>About</u></h1>
         <h4 class="about-titles"><u>WHAT WE DO</u></h4>
-        <div class="whatwedo">{{ page.what }}</div>
+        <div class="whatwedo">{{ page.what | markdownify }}</div>
         <h4 class="about-titles"><u>WHO WE ARE</u></h4>
         <div class="whoweare">
           {% for item in page.who %}
           <p style="margin-bottom: 0;"><u>{{ item.name }}</u></p>
           <p class="team-position">{{ item.position }}</p>
-          <div class="team-description">{{ item.description }}</div>
+          <div class="team-description">{{ item.description | markdownify  }}</div>
           {% endfor %}
         </div>
     </div>
