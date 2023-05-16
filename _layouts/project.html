@@ -48,7 +48,7 @@ layout: default
                 {% endif %}
             </div>
             <div class="project-synopsis">
-                <p>{{ page.synopsis }}</p>
+                <p>{{ page.synopsis | markdownify }}</p>
             </div>  
         </div>
         <div class="project-images">
