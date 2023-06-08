@@ -198,11 +198,9 @@ collections:
       - name: stills
         widget: image
         label: Stills
-        of: image
-        required: true
-        media_library:
-          config:
-            multiple: true
+        widget: list
+        summary: '{{fields.image}}'
+        field: {label: Image, name: image, widget: image}
       - name: main_still
         widget: image
         label: Main Still
