@@ -213,7 +213,6 @@ collections:
         label: Layout
         default: project
         required: false
-       
             
         
 
