@@ -196,7 +196,6 @@ collections:
         label: Watch
         description: Info about viewing platforms
       - name: stills
-        widget: image
         label: Stills
         widget: list
         summary: '{{fields.image}}'
