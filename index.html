@@ -25,7 +25,7 @@ project_order:
                 <li><a href="#" class="projects-drop">Projects</a></li>
                 {% assign projects = site.projects | sort: 'release_year' %}
                 {% for project in projects reversed %} 
-                <li class="projects" data-hover="{{ site.baseurl }}/{{ project.main_still }}"><a href="{{ site.baseurl }}{{ project.url }}">{{ project.title }}</a></li>
+                <li class="projects" data-hover="{{ site.baseurl }}{{ project.main_still }}"><a href="{{ site.baseurl }}{{ project.url }}">{{ project.title }}</a></li>
                 {% endfor %} 
                 <li><a href="{{ site.baseurl }}/podcast" class="news">Podcast</a></li>
                 <li><a href="{{ site.baseurl }}/news">News</a></li>
@@ -39,10 +39,10 @@ project_order:
 <div class="content-area slideshow-content">
     {% assign projects = site.projects | where_exp: "page", "page.highlight == true" %}
     {% for project in projects limit:1 %}
-        <img src="{{ site.baseurl }}/{{ project.main_still }}" class="intro-img active" style="object-position: {{ project.image-align }};" alt="">
+        <img src="{{ site.baseurl }}{{ project.main_still }}" class="intro-img active" style="object-position: {{ project.image-align }};" alt="">
     {% endfor %}
     {% for project in projects offset:1 %}
-        <img src="{{ site.baseurl }}/{{ project.main_still }}" class="intro-img" style="object-position: {{ project.image-align }};" alt="">
+        <img src="{{ site.baseurl }}{{ project.main_still }}" class="intro-img" style="object-position: {{ project.image-align }};" alt="">
     {% endfor %}
 </div>
 
