@@ -144,6 +144,21 @@ collections:
           - name: twitter_link
             label: Twitter Link
             widget: string
+    - name: "donate"
+      label: "Donate Page"
+      file: 'donate.html'
+      editor:
+        preview: false
+      fields:
+        - name: main_text
+          label: 'Content'
+          widget: markdown
+          modes: [rich_text]
+            fields:
+        - name: title
+          widget: string
+          label: Title
+          required: true
   - name: 'projects'
     label: 'Projects'
     folder: '_projects'
