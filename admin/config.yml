@@ -149,15 +149,16 @@ collections:
         file: 'donate.html'
         editor:
           preview: false
-        fields:
-          - name: main_text
-            label: 'Content'
-            widget: markdown
-            modes: [rich_text]
+        fields:          
           - name: title
             widget: string
             label: Title
             required: true
+          - name: main_text
+            label: 'Content'
+            widget: markdown
+            modes: [rich_text]
+
   - name: 'projects'
     label: 'Projects'
     folder: '_projects'
