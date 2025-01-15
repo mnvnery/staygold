@@ -1,12 +1,7 @@
 ---
+layout: default
 title: Donate to LA Wildfire Survivors
-release_year: "2025"
-highlight: true
-director: x
-writer: x
-cast: x
-produced: x
-synopsis: >-
+main_text: >-
   **[LAFD]([https://supportlafd.org/?utm_source=120%20Day%20Engaged%20%28Customers%29&utm_medium=email&utm_campaign=LA_TEXTONLY-%201%2F12%20%2801JHEB49GREFRGZNKKSFVAJWX4%29&bxid=01JHBG2QKV3H101BHZYWYSZ2A7&_kx=lyz3c2zDbc6cW_8_Ckih0XO7XZcwxJ8ILmmg3LVj4Aw.QdMgSV]([https://supportlafd.org/?utm_source=120%20Day%20Engaged%20%28Customers%29&utm_medium=email&utm_campaign=LA_TEXTONLY-%201%2F12%20%2801JHEB49GREFRGZNKKSFVAJWX4%29&bxid=01JHBG2QKV3H101BHZYWYSZ2A7&_kx=lyz3c2zDbc6cW_8_Ckih0XO7XZcwxJ8ILmmg3LVj4Aw.QdMgSV](https://supportlafd.org/?utm_source=120%20Day%20Engaged%20%28Customers%29&utm_medium=email&utm_campaign=LA_TEXTONLY-%201%2F12%20%2801JHEB49GREFRGZNKKSFVAJWX4%29&bxid=01JHBG2QKV3H101BHZYWYSZ2A7&_kx=lyz3c2zDbc6cW_8_Ckih0XO7XZcwxJ8ILmmg3LVj4Aw.QdMgSV)))**
 
 
@@ -38,7 +33,37 @@ synopsis: >-
 
 
   **[F﻿riends in Deed](https://friendsindeedpas.org/donate/)**
-watch: x
-main_still: /assets/img/screenshot-2025-01-13-at-12.01.58 pm.png
-layout: project
 ---
+
+<div class="mobile-grid">
+    <button class="hamburger hamburger--squeeze" type="button">
+        <span class="hamburger-box">
+        <span class="hamburger-inner"></span>
+        </span>
+    </button>
+    <div class="logo-section"><a href="{{ site.baseurl }}/index"><img src="{{ site.baseurl }}/assets/img/logo.svg" class="logo" alt="logo"></a></div>
+    <div class="menu">
+        <ul>
+            <li><a href="{{ site.baseurl }}/index">Stay Gold Features</a></li>
+            <li><a href="{{ site.baseurl }}/about">About</a> </li>
+            <li><a href="{{ site.baseurl }}/pledge" class="pledge">Our Pledge</a></li>
+            <li><a href="#" class="projects-drop">Projects</a></li>
+            {% assign projects = site.projects | sort: 'release_year' %}
+            {% for project in projects reversed %} 
+            <li class="projects" data-hover="{{ site.baseurl }}{{ project.main_still }}"><a href="{{ site.baseurl }}{{ project.url }}">{{ project.title }}</a></li>
+            {% endfor %} 
+            <li><a href="{{ site.baseurl }}/podcast" class="news">Podcast</a></li>
+            <li><a href="{{ site.baseurl }}/news">News</a></li>
+            <li><a href="https://988a29-2.myshopify.com/">Merch</a></li>
+            <li><a href="{{ site.baseurl }}/contact">Contact</a></li>
+            <li><a href="{{ site.baseurl }}/donate"><u>Donate to LA Wildfire Survivors</u></a></li>
+        </ul>
+    </div>
+<div></div>
+</div>   
+<div class="content-area content-scroll">
+  <div class="content-pledge">
+    <h1><u>{{page.title}}</u></h1>
+    <div class="pledge-body">{{ page.main_text | markdownify }}</div>
+    </div>
+</div>
